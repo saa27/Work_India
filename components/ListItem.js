@@ -20,17 +20,17 @@ if (Platform.OS === "android" && Platform.Version >= 21) {
 
 const ListItem = (props) => {
   return (
-    <View style={styles.songItem}>
-      <View style={styles.songAndIcon}>
+    <View style={styles.listItem}>
+      <View style={styles.listAndIcon}>
         <View style={{ flexDirection: "row" }}>
-          <View style={styles.songImg}>
+          <View style={styles.listImg}>
             <Text></Text>
           </View>
           <View style={styles.titleAndartist}>
-            <Text style={styles.songTitle}>{props.title}</Text>
+            <Text style={styles.listTitle}>{props.title}</Text>
             <View style={{ flexDirection: "row" }}>
               <Text style={styles.price}>MRP: {props.artist}</Text>
-              <Text style={styles.songArtist}>{props.extra}</Text>
+              <Text style={styles.listArtist}>{props.extra}</Text>
             </View>
           </View>
         </View>
@@ -40,23 +40,23 @@ const ListItem = (props) => {
 };
 
 const styles = StyleSheet.create({
-  songItem: {
+  listItem: {
     height: height / 12,
     padding: height / 75,
     borderBottomWidth: 0.6,
     borderBottomColor: (220, 220, 20),
     justifyContent: "center",
   },
-  songTitle: {
+  listTitle: {
     fontSize: 16,
     color: "black",
     fontWeight: "bold",
   },
-  songAndIcon: {
+  listAndIcon: {
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  songImg: {
+  listImg: {
     height: height / 18.75,
     width: height / 18.75,
     backgroundColor: "gray",
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
   titleAndartist: {
     paddingLeft: height / 75,
   },
-  songArtist: {
+  listArtist: {
     fontSize: height / 62,
     color: "gray",
   },
